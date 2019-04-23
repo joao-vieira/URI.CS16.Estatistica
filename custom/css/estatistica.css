@@ -1,0 +1,22 @@
+/**
+* This file will store all custom css code written by me
+*/
+
+
+/** 
+* # Bug Fix
+* 
+* See: 
+*   https://github.com/seiyria/bootstrap-slider/issues/689
+*   https://stackoverflow.com/questions/52027988/tooltip-does-not-show-with-bootstrap-slider
+*/
+.tooltip.in {
+    opacity: 1;
+}
+
+
+/* Para teste */
+.destacar {
+    background-color: gray;
+    border: 1px solid black;
+}
