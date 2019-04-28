@@ -2,6 +2,11 @@
 * This file will store all custom css code written by me
 */
 
+/* Tamanho mínimo de largura dos botões padrão */
+.btn-width-min {
+    min-width: 25%;
+}
+
 
 /** 
 * # Bug Fix
