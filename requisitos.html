@@ -20,9 +20,6 @@
     <!-- bootstrap-slides.css -->
     <link rel="stylesheet" href="custom/css/bootstrap-slider-10.6.1.min.css">
 
-    <!-- toastr.css -->
-    <link rel="stylesheet" href="custom/css/toastr-2.1.4.min.css">
-
     <!-- Custom CSS (@joao-vieira) -->
     <link rel="stylesheet" href="custom/css/estatistica.css">
 
@@ -65,8 +62,8 @@
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
-                         <!-- dark Logo text -->
-                         <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                            <!-- dark Logo text -->
+                            <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -129,139 +126,62 @@
             <!-- Container fluid  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
-                
                 <!-- ============================================================== -->
-                <!-- Start Page Content -->
+                <!-- Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
-                <div class="row mt-2">
-                    <!-- Leitura dos Dados -->
-                    <div class="col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Leitura dos dados</h5>
-                                
-                                <form id="form-gerar-valores" onsubmit="dashController.gerarValores(event)">
-                                    <div class="d-flex m-b-30 align-items-center no-block">
-                                        <h6 class="card-subtitle">Escolha o intervalo de inteiros ou digite os números separados por espaço.</h6>
-                                        <div class="ml-auto">
-                                            <div class="form-group" style="margin-top: -15%">
-                                                <label class="col-md-12">Quantidade de Números</label>
-                                                <div class="col-md-12">
-                                                    <input type="number" id="input-qtd-elementos" value="30" step="1" min="5" max="80" class="form-control form-control-line">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="container">
-                                        <div class="row justify-content-md-center col">
-                                            <span class="font-weight-bold mr-3">5</span>
-                                                <input id="values_slider" type="text" class="span2 form-control input-lg" value="" data-slider-min="5" data-slider-max="500" data-slider-step="5" data-slider-value="[50,200]"/>
-                                            <span class="font-weight-bold ml-3">500</span>
-                                            
-                                            <button type="submit" class="btn btn-lg btn-secondary mt-4 btn-width-min"> Gerar Valores </button>
-                                        </div>
-                                    </div>
-                                </form>
-
-                                <div class="container mt-3">
-                                    <div class="row justify-content-md-center col">
-                                        <textarea id="textarea-elementos" rows="5" class="form-control form-control-line"></textarea>
-                                        <button type="button" class="btn btn-lg btn-success mt-4 btn-width-min" onclick="dashController.calcularModulos()"> Calcular </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body bg-light">
-                                <div class="row text-center m-b-4">
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h2 class="m-b-0 font-light" id="qtd-numeros-gerados">-</h2>
-                                        <span class="text-muted">Números Utilizados</span>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h2 class="m-b-0 font-light" id="menor-valor">-</h2>
-                                        <span class="text-muted">Menor Valor</span>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h2 class="m-b-0 font-light" id="maior-valor">-</h2>
-                                        <span class="text-muted">Maior Valor</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Requisitos do Trabalho</h4>
                     </div>
-
-                    <!-- Estatísticas Descritivas -->
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Estatísticas Descritivas</h5>
-                                <h6 class="card-subtitle">Medidas exibidas com base nos valores gerados!</h6>
-                                <div class="m-t-30">
-                                    <div class="row">
-                                        <table class="table table-hover">
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th scope="col"></th>
-                                                    <th scope="col">Estatística</th>
-                                                    <th scope="col">Valor</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tbody-medidas-descritivas">
-                                                
-                                            </tbody>
-                                        </table>                                                      
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-md-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active"><a href="index2.html">Página Inicial</a></li>
+                            </ol>
                         </div>
                     </div>
                 </div>
-                
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Tabela de Distribuição de Frequências e Histograma</h5>
+                                <div class="row justify-content-md-center">
+
+                                    <h2>O trabalho consiste na implementação de um programa estatístico básico</h2>
+                                    <h3> Aproximadamente, o fluxograma do programa está apresentado na Figura 1.</h3>
+
+                                    <img src="assets/images/figura1-fluxo.png" alt="Fluxograma do Sistema">
+                                </div>
                                 <div class="row m-t-30">
-
-                                    <div class="col-md-7">
-                                        <table class="table table-borderless">
-                                            <thead class="bordas-estatistica">
-                                                <tr>
-                                                    <th>Valores</th>
-                                                    <th>F<sub>i</sub></th>
-                                                    <th>X<sub>i</sub></th>
-                                                    <th>F<sub>ac</sub></th>
-                                                    <th>f<sub>i(%)</sub></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tbody-distribuicao-frequencias">
-                                                <tr>
-                                                    <td> 0 <span class="font-weight-bold">|-</span> 5  </td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot class="bordas-estatistica">
-                                                <tr>
-                                                    <th>TOTAL</th>
-                                                    <th id="somatorio-fi"></th>
-                                                    <th>-</th>
-                                                    <th>-</th>
-                                                    <th>100.0</th>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
+                                    <div class="col-md-8 offset-md-2">
+                                        <h4>O módulo de leitura (primeiro) deve ler indefinidos números inteiros (PODE LER TAMBÉM
+                                                NÚMEROS COM DECIMAIS, MAS VAI DIFICULTAR A PROGRAMAÇÃO (DEPENDE DE
+                                                VOCÊS)). A partir desses valores o programa terá dois módulos principais.</h4>
+                                        <h4 class="m-t-20">O primeiro módulo, que
+                                                trabalhará com os dados digitados, calculará e apresentará com uma casa decimal as seguintes
+                                                estatísticas: médias aritméticas e geométricas, moda, mediana, desvio padrão amostral e populacional,
+                                                variância amostral e populacional e coeficiente de variação amostral.</h4>
+                                        <h4 class="m-t-20">O segundo módulo deverá
+                                                converter os valores digitados em uma tabela de distribuição de Frequências completa (Conforme
+                                                apostila). A partir da tabela o programa deverá calcular (novo módulo) as médias aritmética e
+                                                geométrica.</h4>
+                                        <h4 class="m-t-20">Poderá ainda ter um módulo (Não obrigatório) que desenhará a partir da tabela pelo menos
+                                                um dos três gráficos: histograma, polígono de frequências (valerá bônus extra sobre uma nota de prova
+                                                (até 0,5 pontos)</h4>
+                                        <h4 class="m-t-40">É ISSO AÍ, PESSOAL. BOM TRABALHO. <br>
+                                                PROF. CLAODOMIR</h4>
                                     </div>
-
-                                    <div class="col-md-5">
-                                        Histograma, Ogiva ou Polígono de Frequências
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -314,37 +234,6 @@
 
     <!-- bootstrap-slides.js -->
     <script src="custom/js/bootstrap-slider-10.6.1.min.js"></script>
-
-    <!-- toastr.js -->
-    <script src="custom/js/toastr-2.1.4.min.js"></script>
-    <script>
-        toastr.options = {
-            "closeButton": true,
-            "debug": false,
-            "newestOnTop": true,
-            "progressBar": true,
-            "positionClass": "toast-bottom-center",
-            "preventDuplicates": true,
-            "onclick": null,
-            "showDuration": "200",
-            "hideDuration": "500",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        };
-    </script>
-
-    <script src="custom/app/controllers/DashboardController.js"></script>
-    <script src="custom/app/helpers/NumberHelper.js"></script>
-    <script src="custom/app/models/ListaElementos.js"></script>
-    <script src="custom/app/models/EstatisticaDescritiva.js"></script>
-    <script src="custom/app/models/DistribuicaoFrequencia.js"></script>
-    <script>
-        let dashController = new DashboardController();
-    </script>
     
     
 </body>

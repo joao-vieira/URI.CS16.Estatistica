@@ -7,6 +7,12 @@
     min-width: 25%;
 }
 
+/* Bordas da tabela de distribuição de frequências - Cabeçalho e Rodapé */
+.bordas-estatistica {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
 
 /** 
 * # Bug Fix

@@ -1437,18 +1437,21 @@ pre {
   max-width: 100%;
   margin-bottom: 1rem;
   background-color: transparent; }
+  
   .table th,
   .table td {
-    padding: 1rem;
+    padding: 0.8rem;
     vertical-align: top;
-    border-top: 1px solid #dee2e6; }
+    /* border-top: 1px solid #dee2e6;  */
+  }
   .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6; }
-  .table tbody + tbody {
+    /* border-bottom: 2px solid #dee2e6;  */
+  }
+  /* .table tbody + tbody {
     border-top: 2px solid #dee2e6; }
   .table .table {
-    background-color: #edf1f5; }
+    background-color: #edf1f5; } */
 
 .table-sm th,
 .table-sm td {
