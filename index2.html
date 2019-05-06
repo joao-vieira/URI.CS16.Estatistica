@@ -26,6 +26,7 @@
     <!-- Custom CSS (@joao-vieira) -->
     <link rel="stylesheet" href="custom/css/estatistica.css">
 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -221,7 +222,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Tabela de Distribuição de Frequências e Histograma</h5>
+                                <h5 class="card-title">Tabela de Distribuição de Frequências</h5>
                                 <div class="row m-t-30">
 
                                     <div class="col-md-7">
@@ -248,7 +249,13 @@
                                                 </tr>
                                             </tfoot>
                                         </table>
-                                        <div class="card-body bg-light">
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <h5 class="card-title">Ogiva</h5>
+                                        <canvas id="myChart"></canvas>
+                                        
+                                        <div class="card-body bg-light m-t-20">
                                             <div class="row text-center m-b-4">
                                                 <div class="col-lg-6 col-md-6 m-t-20">
                                                     <h2 class="m-b-0 font-light" id="media-aritmetica-ponderada">-</h2>
@@ -260,10 +267,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="col-md-5">
-                                        Histograma, Ogiva ou Polígono de Frequências
                                     </div>
 
                                 </div>
@@ -287,7 +290,7 @@
         <!-- footer -->
         <!-- ============================================================== -->
         <footer class="footer">
-            © 2019 - Trabalho de Estatística (URI Erechim) by <a href="https://github.com/joao-vieira" target="_blank">@joao-vieira</a>
+            © 2019 - Trabalho de Estatística (URI Erechim) | <a href="https://github.com/joao-vieira" target="_blank">João Vitor Veronese Vieira</a>
         </footer>
         <!-- ============================================================== -->
         <!-- End footer -->
@@ -347,6 +350,9 @@
         };
     </script>
 
+    <!-- chart.js -->
+    <script src="custom/js/chartjs.2.8.0.js"></script>
+
     <script src="custom/app/controllers/DashboardController.js"></script>
     <script src="custom/app/helpers/NumberHelper.js"></script>
     <script src="custom/app/models/ListaElementos.js"></script>
@@ -355,6 +361,7 @@
     <script>
         let dashController = new DashboardController();
     </script>
+
     
     
 </body>

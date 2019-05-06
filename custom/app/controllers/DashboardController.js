@@ -39,7 +39,7 @@ class DashboardController {
     _atualizarTabelaDistribuicaoFrequencias() {
         this._distribuicaoFreq.calcularValoresBase(this._listaElementos.menorElemento, this._listaElementos.maiorElemento, this._listaElementos.quantidade);
         let intervalos = this._distribuicaoFreq.calcularIntervalos(this._listaElementos.elementos, this._listaElementos.menorElemento, this._listaElementos.maiorElemento);
-        console.log(intervalos);
+        
         let corpoTabela = intervalos.map(intervalo => `
             <tr>
                 <td class="text-center"> ${intervalo.start} <span class="font-weight-bold">|-</span> ${intervalo.end}  </td>
@@ -62,11 +62,37 @@ class DashboardController {
 
         this._tbodyFrequencias.empty();
         this._tbodyFrequencias.append(corpoTabela);
+        this._renderizarOgiva(intervalos);
     }
 
 
-    _criarLinhasTabelaDF() {
-        
+    _renderizarOgiva(intervalos) {
+        var ctx = document.getElementById('myChart').getContext('2d');
+        let arrFAC = intervalos.map(elm => elm.fac);
+        let arrValores = intervalos.map(elm => elm.end);
+
+        // Para seguir o exemplo do professor, adiciono o menor valor com legenda '0'
+        arrFAC.unshift(0);
+        arrValores.unshift(this._listaElementos.menorElemento);
+
+        var myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: arrValores, // xi
+                datasets: [{
+                    fill:false,
+                    label: 'Valores',
+                    data: arrFAC, // fac
+                    backgroundColor: 'rgb(45, 130, 69)'
+                }]
+            },
+            options: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            }
+        });
     }
 
 
