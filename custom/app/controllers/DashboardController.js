@@ -9,7 +9,11 @@ class DashboardController {
         this._txtMenorValor       = $("#menor-valor");
         this._txtMaiorValor       = $("#maior-valor");
         this._tbodyMedidas        = $("#tbody-medidas-descritivas");
-        this._tbodyFrequencias    = $("#tbody-distribuicao-frequencias");
+
+        this._txtSomatorioFi                = $("#somatorio-fi");
+        this._tbodyFrequencias              = $("#tbody-distribuicao-frequencias");
+        this._txtMediaAritmeticaPonderada   = $("#media-aritmetica-ponderada");
+        this._txtMediaGeometricaPonderada   = $("#media-geometrica-ponderada");
 
         this._listaElementos      = new ListaElementos();
         this._distribuicaoFreq    = new DistribuicaoFrequencia();
@@ -34,7 +38,30 @@ class DashboardController {
 
     _atualizarTabelaDistribuicaoFrequencias() {
         this._distribuicaoFreq.calcularValoresBase(this._listaElementos.menorElemento, this._listaElementos.maiorElemento, this._listaElementos.quantidade);
+        let intervalos = this._distribuicaoFreq.calcularIntervalos(this._listaElementos.elementos, this._listaElementos.menorElemento, this._listaElementos.maiorElemento);
+        console.log(intervalos);
+        let corpoTabela = intervalos.map(intervalo => `
+            <tr>
+                <td class="text-center"> ${intervalo.start} <span class="font-weight-bold">|-</span> ${intervalo.end}  </td>
+                <td class="text-center"> ${intervalo.fi}  </td>
+                <td class="text-center"> ${NumberHelper.arredondamentoABNT5891(intervalo.end + intervalo.start, 1) / 2.0}  </td>
+                <td class="text-center"> ${intervalo.fac}  </td>
+                <td class="text-center"> ${NumberHelper.arredondamentoABNT5891((intervalo.fi / this._distribuicaoFreq.somatorioFi) * 100.0, 1)} </td>
+            </tr>
+        `);
+        
+        let somaXiVezesFi = intervalos.reduce((total, elm) => total + (elm.fi * elm.xi), 0.0);
+        let mediaAritPonderada = somaXiVezesFi / this._distribuicaoFreq.somatorioFi;
 
+        let somaXInaFI = intervalos.reduce((total, elm) => total * Math.pow(elm.xi, elm.fi), 1.0);
+        let mediaGeomPonderada = Math.pow(somaXInaFI, 1/this._distribuicaoFreq.somatorioFi);
+
+        this._txtSomatorioFi.text(this._distribuicaoFreq.somatorioFi);
+        this._txtMediaAritmeticaPonderada.text( NumberHelper.arredondamentoABNT5891(mediaAritPonderada, 1) );
+        this._txtMediaGeometricaPonderada.text( NumberHelper.arredondamentoABNT5891(mediaGeomPonderada, 1) );
+
+        this._tbodyFrequencias.empty();
+        this._tbodyFrequencias.append(corpoTabela);
     }
 
 

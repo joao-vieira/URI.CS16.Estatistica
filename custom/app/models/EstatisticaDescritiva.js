@@ -113,10 +113,7 @@ class EstatisticaDescritiva {
         this._desvPadraoPop     = this._calcDesvioPadrao(this._varianciaPop);
         this._varianciaAmostra  = this._calcVariancia(somatorioElementosD, listaElementos.quantidade - 1);
         this._desvPadraoAmostra = this._calcDesvioPadrao(this._varianciaAmostra);
-        
-        
         this._coeficienteVariac = this._calcCoeficienteVariabilidade(this._desvPadraoAmostra, this._mediaAritmetica);
-        alert(`Coeficiente de Variação amostral deu: ${this._coeficienteVariac}`);
 
         this._medidas = this._atualizarMedidasEstatisticas();
     }

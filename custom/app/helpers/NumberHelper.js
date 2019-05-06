@@ -23,8 +23,6 @@ class NumberHelper {
 
 
     static arredondamentoABNT5891(numeroParaArredondar, casasDecimaisDesejadas) {
-        console.log("=== MÉTODO DE ARREDONDAMENTO ===");
-        console.log(`Número Recebido: ${numeroParaArredondar}  |  Casas decimais desejadas: ${casasDecimaisDesejadas}`);
 
         // Pega todos os valores antes e após o ponto
         let digitosAntesDoPonto                 = numeroParaArredondar.toString().split('.')[0];
@@ -80,17 +78,13 @@ class NumberHelper {
     static arredondaValorAcima(_digitosAntesDoPonto, _digitosAposOPontoAntesDoUltimoMantido, _ultimoValorMantido) {
 
         let valorArredondado = parseInt(_ultimoValorMantido) + 1;
-        let retorno = _digitosAntesDoPonto + '.' + _digitosAposOPontoAntesDoUltimoMantido + valorArredondado;
-        console.warn(`Para arredonar acima [] => ${retorno}`);
-        return retorno;
+        return _digitosAntesDoPonto + '.' + _digitosAposOPontoAntesDoUltimoMantido + valorArredondado;
     }
 
 
     static arredondaValorAbaixo(_digitosAntesDoPonto, _digitosAposOPontoAntesDoUltimoMantido, _ultimoValorMantido) {
 
-        let retorno = _digitosAntesDoPonto + '.' + _digitosAposOPontoAntesDoUltimoMantido + _ultimoValorMantido;
-        console.warn(`Para arredonar abaixo [] => ${retorno}`);
-        return retorno;
+        return _digitosAntesDoPonto + '.' + _digitosAposOPontoAntesDoUltimoMantido + _ultimoValorMantido;
     }
 
 

@@ -4,6 +4,7 @@ class DistribuicaoFrequencia {
         this._R = 0.0;
         this._K = 0.0;
         this._h = 0.0;
+        this._somatorioFi = 0.0;
     }
 
 
@@ -19,6 +20,11 @@ class DistribuicaoFrequencia {
 
     get h() {
         return this._h;
+    }
+
+
+    get somatorioFi() {
+        return this._somatorioFi;
     }
 
 
@@ -45,4 +51,51 @@ class DistribuicaoFrequencia {
         this._H = this._calcularH();
     }
 
+
+    calcularIntervalos(elementos, min, max) {
+        let intervalos = [];
+        let inicio = min;
+        let quantidadeElm = elementos.length;
+        let fi = 0;
+        let fac = 0;
+
+        for (let i = 0; i < this._K; i++) {
+            for(let j = 0; j < quantidadeElm; j++ ) {
+                if( elementos[j] >= inicio  &&  elementos[j] < (inicio + this._H) ) fi++;
+            }
+
+            intervalos[i] = {
+                start: inicio,
+                end: inicio + this._H,
+                fi: fi,
+                xi: NumberHelper.arredondamentoABNT5891(inicio + this._H + inicio, 1) / 2.0,
+                fac: fac + fi
+            };
+
+            inicio += this._H;
+            fac += fi;
+            fi = 0;
+            if(inicio >= max) break;
+        }
+        
+        this._somatorioFi = fac;
+        return intervalos;
+    }
+
+
+    calcularMediaGeometricaPonderada(intervalos) {
+        console.log(intervalos);
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
