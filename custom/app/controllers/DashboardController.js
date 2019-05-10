@@ -81,7 +81,7 @@ class DashboardController {
                 labels: arrValores, // xi
                 datasets: [{
                     fill:false,
-                    label: 'Valores',
+                    label: 'Valor',
                     data: arrFAC, // fac
                     backgroundColor: 'rgb(45, 130, 69)'
                 }]
