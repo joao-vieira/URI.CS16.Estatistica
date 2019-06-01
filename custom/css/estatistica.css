@@ -31,3 +31,14 @@
     background-color: gray;
     border: 1px solid black;
 }
+
+.verticaltext{
+    width:1px;
+    word-wrap: break-word;
+    white-space:pre-wrap;
+}
+
+.vertical-text {
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+}
