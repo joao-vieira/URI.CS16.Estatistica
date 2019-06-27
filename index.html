@@ -1,18 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trabalho de Estatística / 2019</title>
-</head>
-<body>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <center>
-        <h1>Trabalhando nisso...</h1>
-        <iframe src="https://giphy.com/embed/xUOxeTwAzIULo8oTM4" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/eovi-mcd-eovimcd-xUOxeTwAzIULo8oTM4">via GIPHY</a></p>
-    </center>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.jpeg">
+    <title>Trabalho de Estatística</title>
+    
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+
+    <!-- bootstrap-slides.css -->
+    <link rel="stylesheet" href="custom/css/bootstrap-slider-10.6.1.min.css">
+
+    <!-- toastr.css -->
+    <link rel="stylesheet" href="custom/css/toastr-2.1.4.min.css">
+
+    <!-- Custom CSS (@joao-vieira) -->
+    <link rel="stylesheet" href="custom/css/estatistica.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="skin-default-dark fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Trabalho de Estatística</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="assets/images/icon.jpeg" alt="homepage" class="dark-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item hidden-sm-up"> <a class="nav-link nav-toggler waves-effect waves-light" href="javascript:void(0)"><i class="ti-menu"></i></a></li>
+                    </ul>
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/github_icon.png" alt="user" class="img-circle" width="30"></a>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <div class="d-flex no-block nav-text-box align-items-center">
+                <span><img src="assets/images/logo_est.png" alt="elegant admin template"></span>
+                <a class="waves-effect waves-dark ml-auto hidden-sm-down" href="javascript:void(0)"><i class="ti-menu"></i></a>
+                <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+            </div>
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="index2.html" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Página Inicial</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="requisitos.html" aria-expanded="false"><i class="fa fa-question-circle"></i><span class="hide-menu"></span>Requisitos do Trabalho</a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row mt-2">
+                    <!-- Leitura dos Dados -->
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Leitura dos dados</h5>
+                                
+                                <form id="form-gerar-valores" onsubmit="dashController.gerarValores(event)">
+                                    <div class="d-flex m-b-30 align-items-center no-block">
+                                        <h6 class="card-subtitle">Escolha o intervalo de inteiros ou digite os números separados por espaço.</h6>
+                                        <div class="ml-auto">
+                                            <div class="form-group" style="margin-top: -15%">
+                                                <label class="col-md-12">Quantidade de Números</label>
+                                                <div class="col-md-12">
+                                                    <input type="number" id="input-qtd-elementos" value="30" step="1" min="5" max="80" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container">
+                                        <div class="row justify-content-md-center col">
+                                            <span class="font-weight-bold mr-3">5</span>
+                                                <input id="values_slider" type="text" class="span2 form-control input-lg" value="" data-slider-min="5" data-slider-max="500" data-slider-step="5" data-slider-value="[50,200]"/>
+                                            <span class="font-weight-bold ml-3">500</span>
+                                            
+                                            <button type="submit" class="btn btn-lg btn-secondary mt-4 btn-width-min"> Gerar Valores </button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div class="container mt-3">
+                                    <div class="row justify-content-md-center col">
+                                        <textarea id="textarea-elementos" rows="5" class="form-control form-control-line"></textarea>
+                                        <button type="button" class="btn btn-lg btn-success mt-4 btn-width-min" onclick="dashController.calcularModulos()"> Calcular </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body bg-light">
+                                <div class="row text-center m-b-4">
+                                    <div class="col-lg-4 col-md-4 m-t-20">
+                                        <h2 class="m-b-0 font-light" id="qtd-numeros-gerados">-</h2>
+                                        <span class="text-muted">Números Utilizados</span>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 m-t-20">
+                                        <h2 class="m-b-0 font-light" id="menor-valor">-</h2>
+                                        <span class="text-muted">Menor Valor</span>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 m-t-20">
+                                        <h2 class="m-b-0 font-light" id="maior-valor">-</h2>
+                                        <span class="text-muted">Maior Valor</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estatísticas Descritivas -->
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Estatísticas Descritivas</h5>
+                                <h6 class="card-subtitle">Medidas exibidas com base nos valores gerados!</h6>
+                                <div class="m-t-30">
+                                    <div class="row">
+                                        <table class="table table-hover">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Estatística</th>
+                                                    <th scope="col">Valor</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbody-medidas-descritivas">
+                                                
+                                            </tbody>
+                                        </table>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tabela de Distribuição de Frequências</h5>
+                                <div class="row m-t-30">
+
+                                    <div class="col-md-6">
+                                        <table class="table table-borderless">
+                                            <thead class="bordas-estatistica">
+                                                <tr>
+                                                    <th class="text-center">Valores</th>
+                                                    <th class="text-center">F<sub>i</sub></th>
+                                                    <th class="text-center">X<sub>i</sub></th>
+                                                    <th class="text-center">F<sub>ac</sub></th>
+                                                    <th class="text-center">f<sub>i(%)</sub></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbody-distribuicao-frequencias">
+                                                
+                                            </tbody>
+                                            <tfoot class="bordas-estatistica">
+                                                <tr>
+                                                    <th class="text-center">TOTAL</th>
+                                                    <th class="text-center" id="somatorio-fi"></th>
+                                                    <th class="text-center">-</th>
+                                                    <th class="text-center">-</th>
+                                                    <th class="text-center">100.0</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+
+                                    <div class="col-md-5 ml-5">
+                                        <h5 class="card-title">Ogiva</h5>
+                                        <p class="vertical-text" style="padding-left: 12%;">Frequência Acumulada</p>
+                                        <canvas id="myChart"></canvas>
+
+                                        <div class="card-body bg-light m-t-20">
+                                            <div class="row text-center m-b-4">
+                                                <div class="col-lg-6 col-md-6 m-t-20">
+                                                    <h2 class="m-b-0 font-light" id="media-aritmetica-ponderada">-</h2>
+                                                    <span class="text-muted">Média Aritmética Ponderada</span>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 m-t-20">
+                                                    <h2 class="m-b-0 font-light" id="media-geometrica-ponderada">-</h2>
+                                                    <span class="text-muted">Média Geométrica Ponderada</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer">
+            © 2019 - Trabalho de Estatística (URI Erechim) | <a href="https://github.com/joao-vieira" target="_blank">João Vitor Veronese Vieira</a> e <a href="https://github.com/viniciusandd" target="_blank">Vinicius Emanoel Andrade</a>
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+
+    <!--stickey kit -->
+    <script src="assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+
+    <!-- bootstrap-slides.js -->
+    <script src="custom/js/bootstrap-slider-10.6.1.min.js"></script>
+
+    <!-- toastr.js -->
+    <script src="custom/js/toastr-2.1.4.min.js"></script>
+    <script>
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": true,
+            "positionClass": "toast-bottom-center",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "200",
+            "hideDuration": "500",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+    </script>
+
+    <!-- chart.js -->
+    <script src="custom/js/chartjs.2.8.0.js"></script>
+
+    <script src="custom/app/controllers/DashboardController.js"></script>
+    <script src="custom/app/helpers/NumberHelper.js"></script>
+    <script src="custom/app/models/ListaElementos.js"></script>
+    <script src="custom/app/models/EstatisticaDescritiva.js"></script>
+    <script src="custom/app/models/DistribuicaoFrequencia.js"></script>
+    <script>
+        let dashController = new DashboardController();
+    </script>
+
+    
     
 </body>
+
 </html>
+
 
