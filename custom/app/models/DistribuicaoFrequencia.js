@@ -75,7 +75,7 @@ class DistribuicaoFrequencia {
             inicio += this._H;
             fac += fi;
             fi = 0;
-            if(inicio >= max) break;
+            if(inicio > max) break;
         }
         
         this._somatorioFi = fac;
